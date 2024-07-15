@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info
+writing ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/PKG-INFO
+writing dependency_links to ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/dependency_links.txt
+writing entry points to ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/entry_points.txt
+writing requirements to ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/requires.txt
+writing top-level names to ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/top_level.txt
+writing manifest file '../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/SOURCES.txt'
+reading manifest file '../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/SOURCES.txt'
+writing manifest file '../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build
+creating /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib
+creating /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib/laserscan_to_point_pulisher
+copying laserscan_to_point_pulisher/laserscan_to_point_publish.py -> /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib/laserscan_to_point_pulisher
+copying laserscan_to_point_pulisher/__init__.py -> /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib/laserscan_to_point_pulisher
+running install
+running install_lib
+creating /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher
+copying /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib/laserscan_to_point_pulisher/laserscan_to_point_publish.py -> /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher
+copying /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib/laserscan_to_point_pulisher/__init__.py -> /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher
+byte-compiling /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher/laserscan_to_point_publish.py to laserscan_to_point_publish.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/jetson/ros2/src/install/laserscan_to_point_pulisher/share/ament_index
+creating /home/jetson/ros2/src/install/laserscan_to_point_pulisher/share/ament_index/resource_index
+creating /home/jetson/ros2/src/install/laserscan_to_point_pulisher/share/ament_index/resource_index/packages
+copying resource/laserscan_to_point_pulisher -> /home/jetson/ros2/src/install/laserscan_to_point_pulisher/share/ament_index/resource_index/packages
+copying package.xml -> /home/jetson/ros2/src/install/laserscan_to_point_pulisher/share/laserscan_to_point_pulisher
+running install_egg_info
+Copying ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info to /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher-0.0.0-py3.8.egg-info
+running install_scripts
+Installing laserscan_to_point_pulisher script to /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/laserscan_to_point_pulisher
+writing list of installed files to '/home/jetson/ros2/src/build/laserscan_to_point_pulisher/install.log'

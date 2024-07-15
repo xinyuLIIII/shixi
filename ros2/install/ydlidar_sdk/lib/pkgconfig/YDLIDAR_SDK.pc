@@ -1,0 +1,11 @@
+prefix=/home/jetson/ros2/install/ydlidar_sdk
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: YDLIDAR_SDK
+Description: 
+Version: 1.2.5
+Cflags:   -I/home/jetson/ros2/install/ydlidar_sdk/include/src -I/home/jetson/ros2/install/ydlidar_sdk/include
+Libs: -L${libdir}  -lpthread -lrt -lydlidar_sdk
+

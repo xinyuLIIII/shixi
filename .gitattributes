@@ -1,0 +1,4 @@
+ros/ros1_ws/devel/lib/fast_lio/fastlio_mapping filter=lfs diff=lfs merge=lfs -text
+ros/ros1_ws/devel/lib/fast_lio_localization/fastlio_mapping1 filter=lfs diff=lfs merge=lfs -text
+ros/ros1_ws/devel/lib/point_lio/pointlio_mapping filter=lfs diff=lfs merge=lfs -text
+ros/ros1_ws/test_2024-06-25-17-22-07.bag filter=lfs diff=lfs merge=lfs -text

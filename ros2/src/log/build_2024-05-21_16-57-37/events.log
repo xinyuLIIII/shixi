@@ -1,0 +1,156 @@
+[0.000000] (-) TimerEvent: {}
+[0.000679] (-) JobUnselected: {'identifier': 'laserscan_to_point_pulisher'}
+[0.000887] (-) JobUnselected: {'identifier': 'robot_localization'}
+[0.001290] (-) JobUnselected: {'identifier': 'yahboomcar_bringup'}
+[0.001578] (-) JobUnselected: {'identifier': 'yahboomcar_ctrl'}
+[0.001875] (-) JobUnselected: {'identifier': 'yahboomcar_description'}
+[0.001986] (-) JobUnselected: {'identifier': 'yahboomcar_linefollow'}
+[0.002094] (my_package) JobQueued: {'identifier': 'my_package', 'dependencies': OrderedDict()}
+[0.002160] (my_package) JobStarted: {'identifier': 'my_package'}
+[0.021756] (my_package) JobProgress: {'identifier': 'my_package', 'progress': 'cmake'}
+[0.023348] (my_package) JobProgress: {'identifier': 'my_package', 'progress': 'build'}
+[0.024672] (my_package) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jetson/ros2/src/build/my_package', '--', '-j6', '-l6'], 'cwd': '/home/jetson/ros2/src/build/my_package', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jetson'), ('SSH_CLIENT', '192.168.40.144 54360 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/jetson/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/jetson/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/jetson'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-c3239230-f1f8-4ec0-a027-75b1c2c2cc95.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/jetson/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/jetson/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jetson'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/jetson/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/remote-cli:/home/jetson/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-dc854e8a50.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/jetson/ros2/src/build/my_package'), ('SSH_CONNECTION', '192.168.40.144 54360 192.168.40.103 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.081523] (my_package) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.099250] (-) TimerEvent: {}
+[0.130762] (my_package) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.199398] (-) TimerEvent: {}
+[0.299992] (-) TimerEvent: {}
+[0.400581] (-) TimerEvent: {}
+[0.501177] (-) TimerEvent: {}
+[0.583640] (my_package) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.601291] (-) TimerEvent: {}
+[0.645391] (my_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.651284] (my_package) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.701461] (-) TimerEvent: {}
+[0.802200] (-) TimerEvent: {}
+[0.877292] (my_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.902376] (-) TimerEvent: {}
+[0.966563] (my_package) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.968912] (my_package) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.002428] (-) TimerEvent: {}
+[1.102906] (-) TimerEvent: {}
+[1.203664] (-) TimerEvent: {}
+[1.236835] (my_package) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.303806] (-) TimerEvent: {}
+[1.366931] (my_package) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.368550] (my_package) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.368969] (my_package) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.369265] (my_package) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.370302] (my_package) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.370657] (my_package) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.371044] (my_package) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.371756] (my_package) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.372378] (my_package) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[1.373567] (my_package) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.373888] (my_package) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.374302] (my_package) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.379833] (my_package) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.394652] (my_package) StdoutLine: {'line': b'-- Generating done\n'}
+[1.397769] (my_package) StdoutLine: {'line': b'-- Build files have been written to: /home/jetson/ros2/src/build/my_package\n'}
+[1.403877] (-) TimerEvent: {}
+[1.453152] (my_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target gps_imitate_server\x1b[0m\n'}
+[1.474325] (my_package) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/gps_imitate_server.dir/src/gps_imitate_server.cpp.o\x1b[0m\n'}
+[1.504058] (-) TimerEvent: {}
+[1.604698] (-) TimerEvent: {}
+[1.705368] (-) TimerEvent: {}
+[1.806058] (-) TimerEvent: {}
+[1.906740] (-) TimerEvent: {}
+[2.007556] (-) TimerEvent: {}
+[2.108387] (-) TimerEvent: {}
+[2.209201] (-) TimerEvent: {}
+[2.309979] (-) TimerEvent: {}
+[2.410659] (-) TimerEvent: {}
+[2.511450] (-) TimerEvent: {}
+[2.612239] (-) TimerEvent: {}
+[2.713029] (-) TimerEvent: {}
+[2.813793] (-) TimerEvent: {}
+[2.914498] (-) TimerEvent: {}
+[3.015166] (-) TimerEvent: {}
+[3.115829] (-) TimerEvent: {}
+[3.216508] (-) TimerEvent: {}
+[3.317181] (-) TimerEvent: {}
+[3.417866] (-) TimerEvent: {}
+[3.518580] (-) TimerEvent: {}
+[3.619265] (-) TimerEvent: {}
+[3.719938] (-) TimerEvent: {}
+[3.820640] (-) TimerEvent: {}
+[3.921325] (-) TimerEvent: {}
+[4.022004] (-) TimerEvent: {}
+[4.122706] (-) TimerEvent: {}
+[4.223374] (-) TimerEvent: {}
+[4.324058] (-) TimerEvent: {}
+[4.424733] (-) TimerEvent: {}
+[4.525395] (-) TimerEvent: {}
+[4.626111] (-) TimerEvent: {}
+[4.726941] (-) TimerEvent: {}
+[4.827747] (-) TimerEvent: {}
+[4.928558] (-) TimerEvent: {}
+[5.029462] (-) TimerEvent: {}
+[5.130227] (-) TimerEvent: {}
+[5.230998] (-) TimerEvent: {}
+[5.331674] (-) TimerEvent: {}
+[5.432483] (-) TimerEvent: {}
+[5.533246] (-) TimerEvent: {}
+[5.633947] (-) TimerEvent: {}
+[5.734907] (-) TimerEvent: {}
+[5.835769] (-) TimerEvent: {}
+[5.936590] (-) TimerEvent: {}
+[6.037357] (-) TimerEvent: {}
+[6.138037] (-) TimerEvent: {}
+[6.238878] (-) TimerEvent: {}
+[6.339680] (-) TimerEvent: {}
+[6.440563] (-) TimerEvent: {}
+[6.541405] (-) TimerEvent: {}
+[6.642217] (-) TimerEvent: {}
+[6.743062] (-) TimerEvent: {}
+[6.843897] (-) TimerEvent: {}
+[6.944725] (-) TimerEvent: {}
+[7.045516] (-) TimerEvent: {}
+[7.146311] (-) TimerEvent: {}
+[7.247208] (-) TimerEvent: {}
+[7.347956] (-) TimerEvent: {}
+[7.448610] (-) TimerEvent: {}
+[7.549415] (-) TimerEvent: {}
+[7.650351] (-) TimerEvent: {}
+[7.751125] (-) TimerEvent: {}
+[7.851909] (-) TimerEvent: {}
+[7.952539] (-) TimerEvent: {}
+[8.053295] (-) TimerEvent: {}
+[8.154049] (-) TimerEvent: {}
+[8.254724] (-) TimerEvent: {}
+[8.355483] (-) TimerEvent: {}
+[8.456207] (-) TimerEvent: {}
+[8.556849] (-) TimerEvent: {}
+[8.611492] (my_package) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable gps_imitate_server\x1b[0m\n'}
+[8.657027] (-) TimerEvent: {}
+[8.757743] (-) TimerEvent: {}
+[8.858492] (-) TimerEvent: {}
+[8.919963] (my_package) StdoutLine: {'line': b'[100%] Built target gps_imitate_server\n'}
+[8.943913] (my_package) CommandEnded: {'returncode': 0}
+[8.958627] (-) TimerEvent: {}
+[8.989717] (my_package) JobProgress: {'identifier': 'my_package', 'progress': 'install'}
+[9.014641] (my_package) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jetson/ros2/src/build/my_package'], 'cwd': '/home/jetson/ros2/src/build/my_package', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jetson'), ('SSH_CLIENT', '192.168.40.144 54360 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/jetson/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/jetson/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/jetson'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-c3239230-f1f8-4ec0-a027-75b1c2c2cc95.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/jetson/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/jetson/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jetson'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/jetson/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/remote-cli:/home/jetson/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-dc854e8a50.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/jetson/ros2/src/build/my_package'), ('SSH_CONNECTION', '192.168.40.144 54360 192.168.40.103 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[9.036976] (my_package) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.037633] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/lib/my_package/gps_imitate_server\n'}
+[9.038894] (my_package) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/ros2/src/install/my_package/lib/my_package/gps_imitate_server" to ""\n'}
+[9.039312] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/launch\n'}
+[9.039609] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/launch/gps_imitate_server.launch.py\n'}
+[9.040001] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/ament_index/resource_index/package_run_dependencies/my_package\n'}
+[9.040413] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/ament_index/resource_index/parent_prefix_path/my_package\n'}
+[9.040816] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/environment/ament_prefix_path.sh\n'}
+[9.041166] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/environment/ament_prefix_path.dsv\n'}
+[9.041492] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/environment/path.sh\n'}
+[9.041827] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/environment/path.dsv\n'}
+[9.042201] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/local_setup.bash\n'}
+[9.042589] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/local_setup.sh\n'}
+[9.042933] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/local_setup.zsh\n'}
+[9.043244] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/local_setup.dsv\n'}
+[9.043574] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/package.dsv\n'}
+[9.043942] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/ament_index/resource_index/packages/my_package\n'}
+[9.044313] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/cmake/my_packageConfig.cmake\n'}
+[9.044640] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/cmake/my_packageConfig-version.cmake\n'}
+[9.044953] (my_package) StdoutLine: {'line': b'-- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/package.xml\n'}
+[9.049209] (my_package) CommandEnded: {'returncode': 0}
+[9.058764] (-) TimerEvent: {}
+[9.137808] (my_package) JobEnded: {'identifier': 'my_package', 'rc': 0}
+[9.140043] (-) EventReactorShutdown: {}

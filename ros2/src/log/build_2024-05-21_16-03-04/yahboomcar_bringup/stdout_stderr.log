@@ -1,0 +1,93 @@
+running egg_info
+creating ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info
+writing ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/PKG-INFO
+writing dependency_links to ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/dependency_links.txt
+writing entry points to ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/entry_points.txt
+writing requirements to ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/requires.txt
+writing top-level names to ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/top_level.txt
+writing manifest file '../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/SOURCES.txt'
+reading manifest file '../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/SOURCES.txt'
+writing manifest file '../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jetson/ros2/src/build/yahboomcar_bringup/build
+creating /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib
+creating /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/calibrate_linear_R2.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/patrol_4ROS.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/patrol_a1_X3.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/Mcnamu_driver_X3.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/calibrate_angular_R2.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/transform_utils.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/patrol_4ROS_R2.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/untitled.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/Ackman_driver_R2.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/test.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/patrol_a1_R2.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/calibrate_angular_X3.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/Mcnamu_driver_x1.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/calibrate_linear_X3.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+copying yahboomcar_bringup/__init__.py -> /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup
+running install
+running install_lib
+creating /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/calibrate_linear_R2.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/patrol_4ROS.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/patrol_a1_X3.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/Mcnamu_driver_X3.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/calibrate_angular_R2.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/transform_utils.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/patrol_4ROS_R2.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/untitled.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/Ackman_driver_R2.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/test.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/patrol_a1_R2.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/calibrate_angular_X3.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/Mcnamu_driver_x1.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/calibrate_linear_X3.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+copying /home/jetson/ros2/src/build/yahboomcar_bringup/build/lib/yahboomcar_bringup/__init__.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/calibrate_linear_R2.py to calibrate_linear_R2.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/patrol_4ROS.py to patrol_4ROS.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/patrol_a1_X3.py to patrol_a1_X3.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/Mcnamu_driver_X3.py to Mcnamu_driver_X3.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/calibrate_angular_R2.py to calibrate_angular_R2.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/transform_utils.py to transform_utils.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/patrol_4ROS_R2.py to patrol_4ROS_R2.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/untitled.py to untitled.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/Ackman_driver_R2.py to Ackman_driver_R2.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/test.py to test.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/patrol_a1_R2.py to patrol_a1_R2.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/calibrate_angular_X3.py to calibrate_angular_X3.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/Mcnamu_driver_x1.py to Mcnamu_driver_x1.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/calibrate_linear_X3.py to calibrate_linear_X3.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/jetson/ros2/src/install/yahboomcar_bringup/share/ament_index
+creating /home/jetson/ros2/src/install/yahboomcar_bringup/share/ament_index/resource_index
+creating /home/jetson/ros2/src/install/yahboomcar_bringup/share/ament_index/resource_index/packages
+copying resource/yahboomcar_bringup -> /home/jetson/ros2/src/install/yahboomcar_bringup/share/ament_index/resource_index/packages
+copying package.xml -> /home/jetson/ros2/src/install/yahboomcar_bringup/share/yahboomcar_bringup
+creating /home/jetson/ros2/src/install/yahboomcar_bringup/share/yahboomcar_bringup/launch
+copying launch/yahboomcar_bringup_X1_launch.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/share/yahboomcar_bringup/launch
+copying launch/yahboomcar_bringup_X3_launch.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/share/yahboomcar_bringup/launch
+copying launch/yahboomcar_bringup_R2_launch.py -> /home/jetson/ros2/src/install/yahboomcar_bringup/share/yahboomcar_bringup/launch
+creating /home/jetson/ros2/src/install/yahboomcar_bringup/share/yahboomcar_description
+creating /home/jetson/ros2/src/install/yahboomcar_bringup/share/yahboomcar_description/rviz
+copying rviz/yahboomcar.rviz -> /home/jetson/ros2/src/install/yahboomcar_bringup/share/yahboomcar_description/rviz
+creating /home/jetson/ros2/src/install/yahboomcar_bringup/share/yahboomcar_bringup/param
+copying param/imu_filter_param.yaml -> /home/jetson/ros2/src/install/yahboomcar_bringup/share/yahboomcar_bringup/param
+running install_egg_info
+Copying ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup-0.0.0-py3.8.egg-info
+running install_scripts
+Installing Ackman_driver_R2 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+Installing Mcnamu_driver_X3 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+Installing Mcnamu_driver_x1 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+Installing calibrate_angular_R2 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+Installing calibrate_angular_X3 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+Installing calibrate_linear_R2 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+Installing calibrate_linear_X3 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+Installing patrol_4ROS script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+Installing patrol_4ROS_R2 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+Installing patrol_a1_R2 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+Installing patrol_a1_X3 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+writing list of installed files to '/home/jetson/ros2/src/build/yahboomcar_bringup/install.log'

@@ -1,0 +1,28 @@
+[0.024s] Invoking command in '/home/jetson/ros2/src/build/my_package': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/jetson/ros2/src/build/my_package -- -j6 -l6
+[0.112s] [35m[1mScanning dependencies of target gps_imitate_server[0m
+[0.178s] [ 50%] [32mBuilding CXX object CMakeFiles/gps_imitate_server.dir/src/gps_imitate_server.cpp.o[0m
+[7.749s] [100%] [32m[1mLinking CXX executable gps_imitate_server[0m
+[8.056s] [100%] Built target gps_imitate_server
+[8.083s] Invoked command in '/home/jetson/ros2/src/build/my_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/jetson/ros2/src/build/my_package -- -j6 -l6
+[8.159s] Invoking command in '/home/jetson/ros2/src/build/my_package': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/jetson/ros2/src/build/my_package
+[8.179s] -- Install configuration: ""
+[8.180s] -- Installing: /home/jetson/ros2/src/install/my_package/lib/my_package/gps_imitate_server
+[8.181s] -- Set runtime path of "/home/jetson/ros2/src/install/my_package/lib/my_package/gps_imitate_server" to ""
+[8.181s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/launch
+[8.181s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/launch/gps_imitate_server.launch.py
+[8.181s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/ament_index/resource_index/package_run_dependencies/my_package
+[8.182s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/ament_index/resource_index/parent_prefix_path/my_package
+[8.182s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/environment/ament_prefix_path.sh
+[8.182s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/environment/ament_prefix_path.dsv
+[8.182s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/environment/path.sh
+[8.182s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/environment/path.dsv
+[8.183s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/local_setup.bash
+[8.183s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/local_setup.sh
+[8.183s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/local_setup.zsh
+[8.183s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/local_setup.dsv
+[8.183s] -- Installing: /home/jetson/ros2/src/install/my_package/share/my_package/package.dsv
+[8.183s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/ament_index/resource_index/packages/my_package
+[8.184s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/cmake/my_packageConfig.cmake
+[8.184s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/cmake/my_packageConfig-version.cmake
+[8.184s] -- Up-to-date: /home/jetson/ros2/src/install/my_package/share/my_package/package.xml
+[8.189s] Invoked command in '/home/jetson/ros2/src/build/my_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/jetson/ros2/src/build/my_package

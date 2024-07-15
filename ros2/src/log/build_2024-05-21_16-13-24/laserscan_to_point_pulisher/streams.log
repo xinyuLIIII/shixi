@@ -1,0 +1,37 @@
+[3.570s] Invoking command in '/home/jetson/ros2/src/laserscan_to_point_pulisher': PYTHONPATH=/home/jetson/ros2/src/build/laserscan_to_point_pulisher/prefix_override:/home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/laserscan_to_point_pulisher build --build-base /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build install --record /home/jetson/ros2/src/build/laserscan_to_point_pulisher/install.log --install-scripts $base/lib/laserscan_to_point_pulisher --single-version-externally-managed install_data
+[4.086s] running egg_info
+[4.087s] creating ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info
+[4.089s] writing ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/PKG-INFO
+[4.090s] writing dependency_links to ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/dependency_links.txt
+[4.092s] writing entry points to ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/entry_points.txt
+[4.093s] writing requirements to ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/requires.txt
+[4.093s] writing top-level names to ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/top_level.txt
+[4.094s] writing manifest file '../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/SOURCES.txt'
+[4.157s] reading manifest file '../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/SOURCES.txt'
+[4.159s] writing manifest file '../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info/SOURCES.txt'
+[4.159s] running build
+[4.160s] running build_py
+[4.160s] creating /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build
+[4.160s] creating /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib
+[4.160s] creating /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib/laserscan_to_point_pulisher
+[4.161s] copying laserscan_to_point_pulisher/laserscan_to_point_publish.py -> /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib/laserscan_to_point_pulisher
+[4.161s] copying laserscan_to_point_pulisher/__init__.py -> /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib/laserscan_to_point_pulisher
+[4.161s] running install
+[4.162s] running install_lib
+[4.165s] creating /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher
+[4.165s] copying /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib/laserscan_to_point_pulisher/laserscan_to_point_publish.py -> /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher
+[4.165s] copying /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build/lib/laserscan_to_point_pulisher/__init__.py -> /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher
+[4.166s] byte-compiling /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher/laserscan_to_point_publish.py to laserscan_to_point_publish.cpython-38.pyc
+[4.171s] byte-compiling /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher/__init__.py to __init__.cpython-38.pyc
+[4.171s] running install_data
+[4.171s] creating /home/jetson/ros2/src/install/laserscan_to_point_pulisher/share/ament_index
+[4.172s] creating /home/jetson/ros2/src/install/laserscan_to_point_pulisher/share/ament_index/resource_index
+[4.172s] creating /home/jetson/ros2/src/install/laserscan_to_point_pulisher/share/ament_index/resource_index/packages
+[4.172s] copying resource/laserscan_to_point_pulisher -> /home/jetson/ros2/src/install/laserscan_to_point_pulisher/share/ament_index/resource_index/packages
+[4.172s] copying package.xml -> /home/jetson/ros2/src/install/laserscan_to_point_pulisher/share/laserscan_to_point_pulisher
+[4.173s] running install_egg_info
+[4.175s] Copying ../build/laserscan_to_point_pulisher/laserscan_to_point_pulisher.egg-info to /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages/laserscan_to_point_pulisher-0.0.0-py3.8.egg-info
+[4.178s] running install_scripts
+[4.218s] Installing laserscan_to_point_pulisher script to /home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/laserscan_to_point_pulisher
+[4.219s] writing list of installed files to '/home/jetson/ros2/src/build/laserscan_to_point_pulisher/install.log'
+[4.317s] Invoked command in '/home/jetson/ros2/src/laserscan_to_point_pulisher' returned '0': PYTHONPATH=/home/jetson/ros2/src/build/laserscan_to_point_pulisher/prefix_override:/home/jetson/ros2/src/install/laserscan_to_point_pulisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/laserscan_to_point_pulisher build --build-base /home/jetson/ros2/src/build/laserscan_to_point_pulisher/build install --record /home/jetson/ros2/src/build/laserscan_to_point_pulisher/install.log --install-scripts $base/lib/laserscan_to_point_pulisher --single-version-externally-managed install_data

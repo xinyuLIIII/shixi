@@ -1,0 +1,23 @@
+[2.687s] Invoking command in '/home/jetson/ros2/src/yahboomcar_linefollow': PYTHONPATH=/home/jetson/ros2/src/build/yahboomcar_linefollow/prefix_override:/home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/yahboomcar_linefollow build --build-base /home/jetson/ros2/src/build/yahboomcar_linefollow/build install --record /home/jetson/ros2/src/build/yahboomcar_linefollow/install.log --install-scripts $base/lib/yahboomcar_linefollow --single-version-externally-managed install_data
+[3.176s] running egg_info
+[3.177s] writing ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/PKG-INFO
+[3.178s] writing dependency_links to ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/dependency_links.txt
+[3.181s] writing entry points to ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/entry_points.txt
+[3.181s] writing requirements to ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/requires.txt
+[3.181s] writing top-level names to ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/top_level.txt
+[3.243s] reading manifest file '../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/SOURCES.txt'
+[3.245s] writing manifest file '../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/SOURCES.txt'
+[3.248s] running build
+[3.248s] running build_py
+[3.248s] running install
+[3.249s] running install_lib
+[3.252s] running install_data
+[3.253s] running install_egg_info
+[3.257s] removing '/home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow-0.0.0-py3.8.egg-info' (and everything under it)
+[3.268s] Copying ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info to /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow-0.0.0-py3.8.egg-info
+[3.271s] running install_scripts
+[3.299s] Installing follow_line_4ROS_R2 script to /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/yahboomcar_linefollow
+[3.300s] Installing follow_line_a1_R2 script to /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/yahboomcar_linefollow
+[3.300s] Installing follow_line_a1_X3 script to /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/yahboomcar_linefollow
+[3.301s] writing list of installed files to '/home/jetson/ros2/src/build/yahboomcar_linefollow/install.log'
+[3.373s] Invoked command in '/home/jetson/ros2/src/yahboomcar_linefollow' returned '0': PYTHONPATH=/home/jetson/ros2/src/build/yahboomcar_linefollow/prefix_override:/home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/yahboomcar_linefollow build --build-base /home/jetson/ros2/src/build/yahboomcar_linefollow/build install --record /home/jetson/ros2/src/build/yahboomcar_linefollow/install.log --install-scripts $base/lib/yahboomcar_linefollow --single-version-externally-managed install_data

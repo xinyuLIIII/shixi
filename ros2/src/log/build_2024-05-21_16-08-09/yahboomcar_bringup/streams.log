@@ -1,0 +1,31 @@
+[2.788s] Invoking command in '/home/jetson/ros2/src/yahboomcar_bringup': PYTHONPATH=/home/jetson/ros2/src/build/yahboomcar_bringup/prefix_override:/home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/yahboomcar_bringup build --build-base /home/jetson/ros2/src/build/yahboomcar_bringup/build install --record /home/jetson/ros2/src/build/yahboomcar_bringup/install.log --install-scripts $base/lib/yahboomcar_bringup --single-version-externally-managed install_data
+[3.282s] running egg_info
+[3.284s] writing ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/PKG-INFO
+[3.285s] writing dependency_links to ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/dependency_links.txt
+[3.286s] writing entry points to ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/entry_points.txt
+[3.287s] writing requirements to ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/requires.txt
+[3.288s] writing top-level names to ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/top_level.txt
+[3.353s] reading manifest file '../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/SOURCES.txt'
+[3.355s] writing manifest file '../build/yahboomcar_bringup/yahboomcar_bringup.egg-info/SOURCES.txt'
+[3.355s] running build
+[3.355s] running build_py
+[3.357s] running install
+[3.358s] running install_lib
+[3.362s] running install_data
+[3.363s] running install_egg_info
+[3.367s] removing '/home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup-0.0.0-py3.8.egg-info' (and everything under it)
+[3.368s] Copying ../build/yahboomcar_bringup/yahboomcar_bringup.egg-info to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages/yahboomcar_bringup-0.0.0-py3.8.egg-info
+[3.370s] running install_scripts
+[3.410s] Installing Ackman_driver_R2 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.410s] Installing Mcnamu_driver_X3 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.411s] Installing Mcnamu_driver_x1 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.411s] Installing calibrate_angular_R2 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.411s] Installing calibrate_angular_X3 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.411s] Installing calibrate_linear_R2 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.414s] Installing calibrate_linear_X3 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.414s] Installing patrol_4ROS script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.414s] Installing patrol_4ROS_R2 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.415s] Installing patrol_a1_R2 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.415s] Installing patrol_a1_X3 script to /home/jetson/ros2/src/install/yahboomcar_bringup/lib/yahboomcar_bringup
+[3.415s] writing list of installed files to '/home/jetson/ros2/src/build/yahboomcar_bringup/install.log'
+[3.478s] Invoked command in '/home/jetson/ros2/src/yahboomcar_bringup' returned '0': PYTHONPATH=/home/jetson/ros2/src/build/yahboomcar_bringup/prefix_override:/home/jetson/ros2/src/install/yahboomcar_bringup/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/yahboomcar_bringup build --build-base /home/jetson/ros2/src/build/yahboomcar_bringup/build install --record /home/jetson/ros2/src/build/yahboomcar_bringup/install.log --install-scripts $base/lib/yahboomcar_bringup --single-version-externally-managed install_data

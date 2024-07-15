@@ -1,0 +1,48 @@
+running egg_info
+creating ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info
+writing ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/PKG-INFO
+writing dependency_links to ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/dependency_links.txt
+writing entry points to ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/entry_points.txt
+writing requirements to ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/requires.txt
+writing top-level names to ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/top_level.txt
+writing manifest file '../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/SOURCES.txt'
+reading manifest file '../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/SOURCES.txt'
+writing manifest file '../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jetson/ros2/src/build/yahboomcar_linefollow/build
+creating /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib
+creating /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow
+copying yahboomcar_linefollow/follow_line_a1_X3.py -> /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow
+copying yahboomcar_linefollow/follow_common.py -> /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow
+copying yahboomcar_linefollow/follow_line_4ROS_R2.py -> /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow
+copying yahboomcar_linefollow/follow_line_a1_R2.py -> /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow
+copying yahboomcar_linefollow/__init__.py -> /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow
+running install
+running install_lib
+creating /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow
+copying /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow/follow_line_a1_X3.py -> /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow
+copying /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow/follow_common.py -> /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow
+copying /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow/follow_line_4ROS_R2.py -> /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow
+copying /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow/follow_line_a1_R2.py -> /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow
+copying /home/jetson/ros2/src/build/yahboomcar_linefollow/build/lib/yahboomcar_linefollow/__init__.py -> /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow/follow_line_a1_X3.py to follow_line_a1_X3.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow/follow_common.py to follow_common.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow/follow_line_4ROS_R2.py to follow_line_4ROS_R2.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow/follow_line_a1_R2.py to follow_line_a1_R2.cpython-38.pyc
+byte-compiling /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/jetson/ros2/src/install/yahboomcar_linefollow/share/ament_index
+creating /home/jetson/ros2/src/install/yahboomcar_linefollow/share/ament_index/resource_index
+creating /home/jetson/ros2/src/install/yahboomcar_linefollow/share/ament_index/resource_index/packages
+copying resource/yahboomcar_linefollow -> /home/jetson/ros2/src/install/yahboomcar_linefollow/share/ament_index/resource_index/packages
+copying package.xml -> /home/jetson/ros2/src/install/yahboomcar_linefollow/share/yahboomcar_linefollow
+creating /home/jetson/ros2/src/install/yahboomcar_linefollow/share/yahboomcar_linefollow/launch
+copying launch/linefollow_X3.launch.py -> /home/jetson/ros2/src/install/yahboomcar_linefollow/share/yahboomcar_linefollow/launch
+running install_egg_info
+Copying ../build/yahboomcar_linefollow/yahboomcar_linefollow.egg-info to /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/python3.8/site-packages/yahboomcar_linefollow-0.0.0-py3.8.egg-info
+running install_scripts
+Installing follow_line_4ROS_R2 script to /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/yahboomcar_linefollow
+Installing follow_line_a1_R2 script to /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/yahboomcar_linefollow
+Installing follow_line_a1_X3 script to /home/jetson/ros2/src/install/yahboomcar_linefollow/lib/yahboomcar_linefollow
+writing list of installed files to '/home/jetson/ros2/src/build/yahboomcar_linefollow/install.log'

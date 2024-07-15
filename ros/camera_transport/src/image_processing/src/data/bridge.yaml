@@ -1,0 +1,5 @@
+train: data/bridge/images/train
+val: data/bridge/images/val
+
+nc: 3
+names: ['bridge', 'piers', 'kong']
