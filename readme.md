@@ -96,6 +96,16 @@ export ROS_HOSTNAME=192.168.1.224 -->
 
 位置在[这里](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755)
 
+api接口文档在[文档](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\WebAPI.md)
+
+通过api接口接收数据的[代码](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\WebAPI.md)
+
+通过yolov8处理实时传输的视频流[代码](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\yolo_utils.py)
+
+处理ais经纬度信息变换并计算角度[代码](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\ship_utils.py)
+
+[主函数代码](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\total.py)
+
 ### 完成任务
 
 通过采集船只自身摄像头和ais信息和周围ais信息，将摄像头内识别到的船匹配它的ais信息
@@ -117,6 +127,12 @@ export ROS_HOSTNAME=192.168.1.224 -->
 #### 7.12
 摆了一周，目前存在问题为由于摄像头的畸变问题以及摄像头的水平朝向与ais记录的船只朝向不一定相同的问题导致ais计算的角度与通过图像计算的角度差别很大，暂无解决方法，需要真实数据调试后才知道。另外，真实数据中船舶的ais信息不一定有而且也不一定准确。
 
+### 7.15
+拿到了ais信息和视频的接口文档，写了接口调用同时做了测试，但发现视频是wss形式，没办法直接被cv处理，研究了半天也没找到方法
 
+### 7.16
+找到了http协议的视频，用它做了测试，完成了用yolov8做视频的实时推理。能够和之前的代码融合起来，在计算出来角度并显示出来。通过调用ais接口得到附件船舶ais信息，测算出了每艘船距离该船只的角度与距离。
+
+已经做完了融合，并且做了模块化处理。
 
 

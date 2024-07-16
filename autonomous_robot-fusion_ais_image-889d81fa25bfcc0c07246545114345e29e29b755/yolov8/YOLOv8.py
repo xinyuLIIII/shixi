@@ -50,6 +50,33 @@ class YOLOv8:
 
         return self.boxes, self.scores, self.class_ids
 
+    def process_video(self, video_path):
+        cap = cv2.VideoCapture(video_path)
+        if not cap.isOpened():
+            print("Error: Unable to open video.")
+            return
+
+        while True:
+            ret, frame = cap.read()
+            if not ret:
+                break
+
+            # Detect objects in the frame
+            _, _, _ = self.detect_objects(frame)
+
+            # Draw detections on the frame
+            detected_frame = self.draw_detections(frame)
+
+            # Display the frame with detections
+            cv2.imshow('YOLOv8 Detection', detected_frame)
+
+            # Break the loop when 'q' is pressed
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+
+        cap.release()
+        cv2.destroyAllWindows()
+
     def prepare_input(self, image):
         self.img_height, self.img_width = image.shape[:2]
 
