@@ -94,17 +94,17 @@ export ROS_HOSTNAME=192.168.1.224 -->
 
 ### 代码位置
 
-位置在[这里](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755)
+位置在[这里](fusion_ais_image)
 
-api接口文档在[文档](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\WebAPI.md)
+api接口文档在[文档](fusion_ais_image\WebAPI.md)
 
-通过api接口接收数据的[代码](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\WebAPI.md)
+通过api接口接收数据的[代码](fusion_ais_image\WebAPI.md)
 
-通过yolov8处理实时传输的视频流[代码](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\yolo_utils.py)
+通过yolov8处理实时传输的视频流[代码](fusion_ais_image\yolo_utils.py)
 
-处理ais经纬度信息变换并计算角度[代码](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\ship_utils.py)
+处理ais经纬度信息变换并计算角度[代码](fusion_ais_image\ship_utils.py)
 
-[主函数代码](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\total.py)
+[主函数代码](fusion_ais_image\total.py)
 
 ### 完成任务
 
@@ -136,7 +136,13 @@ api接口文档在[文档](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c072
 已经做完了融合，并且做了模块化处理。
 
 #### 7.17
-蹲一上午数据，终于有了，位置在[autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\video](autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755\video)
+蹲一上午数据，终于有了，位置在[fusion_ais_image\video](fusion_ais_image\video)
 
+### 7.23
+将数据实现在实时处理并上传到局域网内，[测试代码](fusion_ais_image\web_test.py)
 
+更换了[新模型](fusion_ais_image\onnx)best.onnx
 
+具体功能在[fusion_ais_image\total.py](fusion_ais_image\total.py)
+
+实现的[前端网页](fusion_ais_image\videoPlayer.html)

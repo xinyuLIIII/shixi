@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Video Stream</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <video id="video" controls autoplay></video>
+    <script>
+        var video = document.getElementById('video');
+        var hls = new Hls();
+        var videoSrc = 'http://192.168.1.202:8080/test-live?port=11935&app=myapp&stream=test';
+
+        if (Hls.isSupported()) {
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+                hls.loadSource(videoSrc);
+                hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+                    console.log("Manifest loaded, found " + data.levels.length + " quality level");
+                    video.play();
+                });
+            });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = videoSrc;
+            video.addEventListener('canplay', function () {
+                video.play();
+            });
+        } else {
+            console.error('This browser does not support HLS video streaming.');
+        }
+    </script>
+</body>
+</html>
