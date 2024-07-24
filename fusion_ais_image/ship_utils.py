@@ -26,7 +26,7 @@ def calculate_relative_positions(target_points: pd.DataFrame, camera_para: list)
     for index, row in target_points.iterrows():
         lon_v, lat_v, mmsi_v = row['lon'], row['lat'], row['mmsi']
         D_abs = count_distance((lat_cam, lon_cam), (lat_v, lon_v))
-        if D_abs <= 6000:  # 过滤大于5000米的目标点
+        if D_abs <= 6000:  # 过滤大于6000米的目标点
             relative_angle = get_degree(lat_cam, lon_cam, lat_v, lon_v)
             Angle_hor = relative_angle - shoot_hdir
             if Angle_hor < -180:

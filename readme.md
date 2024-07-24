@@ -106,9 +106,11 @@ api接口文档在[文档](fusion_ais_image\WebAPI.md)
 
 [主函数代码](fusion_ais_image\total.py)
 
+实现的[前端网页](fusion_ais_image\videoPlayer.html)，需要注意要启动http服务，在运行前，终端运行python -m http.server，网址为http://<局域网IP地址>:8000/videoPlayer.html
+
 ### 完成任务
 
-通过采集船只自身摄像头和ais信息和周围ais信息，将摄像头内识别到的船匹配它的ais信息
+通过采集船只自身摄像头和ais信息和周围ais信息，将摄像头内识别到的船匹配它的ais信息,并将实时处理的视频传到局域网内。
 
 想提一下的是，在这个过程中尝试了用深度估计的办法来测距，代码为[monodepth2](monodepth2\AIS_MONO.py),这里存在的问题是纹理不是很明显，远处的船和背景融为一体，而且在有几条船的时候很难区分出距离远近，深度估计现在看来可以用在近距离或纹理较为明显的情况下测距。另一种深度估计为depth_anything，但这种对于显卡要求较高，需要四张3090/3080所以并未尝试，而且从[官网](https://github.com/LiheYoung/Depth-Anything)看起来好于monodepth但仍不满足使用场景。
 
@@ -138,7 +140,7 @@ api接口文档在[文档](fusion_ais_image\WebAPI.md)
 #### 7.17
 蹲一上午数据，终于有了，位置在[fusion_ais_image\video](fusion_ais_image\video)
 
-### 7.23
+#### 7.23
 将数据实现在实时处理并上传到局域网内，[测试代码](fusion_ais_image\web_test.py)
 
 更换了[新模型](fusion_ais_image\onnx)best.onnx

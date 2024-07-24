@@ -17,19 +17,19 @@ def initialize_video_stream(stream_url, weights_path, detection_threshold, outpu
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = cap.get(cv2.CAP_PROP_FPS)
-    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    fourcc = cv2.VideoWriter.fourcc(*'XVID')
     out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
 
     return cap, yolov8, out
 
-def process_frame(frame, width, height, yolov8, angle_mmsi_mapping, distance_mmsi_mapping, matched_angles):
+def process_frame(frame, width, height, yolov8, angle_mmsi_mapping, distance_mmsi_mapping,interpolated_distances,matched_angles):
     bottom_center = (width // 2, height)
     boxes, scores, class_ids = yolov8.detect_objects(frame)
     annotations = []
 
     for box in boxes:
         x1, y1, x2, y2 = box
-        mmsi_info, distance_info = match_mmsi_and_distance((x1, y1, x2, y2), bottom_center, angle_mmsi_mapping, distance_mmsi_mapping, matched_angles)
+        mmsi_info, distance_info = match_mmsi_and_distance((x1, y1, x2, y2), bottom_center, angle_mmsi_mapping, distance_mmsi_mapping,interpolated_distances,matched_angles)
         annotations.append((mmsi_info, distance_info, (x1, y1, x2, y2)))
 
     return annotations
@@ -41,9 +41,9 @@ def display_and_save_frame(frame, annotations, out):
         cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)
 
     # out.write(frame)
-    # cv2.imshow('Detection', frame)
-    # if cv2.waitKey(1) & 0xFF == ord('q'):
-    #     return False
+    cv2.imshow('Detection', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        return False
     return True
 
 def calculate_angle(near_edge_midpoint, bottom_center):
@@ -52,7 +52,7 @@ def calculate_angle(near_edge_midpoint, bottom_center):
     angle = math.degrees(math.atan2(dx, dy))
     return angle
 
-def match_mmsi_and_distance(box, bottom_center, angle_mmsi_mapping, distance_mmsi_mapping, matched_angles):
+def match_mmsi_and_distance(box, bottom_center, angle_mmsi_mapping, distance_mmsi_mapping, interpolated_distances, matched_angles):
     x1, y1, x2, y2 = box
     mmsi_info = "Unknown MMSI"
     distance_info = "Unknown Distance"
@@ -70,16 +70,23 @@ def match_mmsi_and_distance(box, bottom_center, angle_mmsi_mapping, distance_mms
     closest_five = heapq.nsmallest(5, angle_diffs)  # 获取最接近的五个角度
 
     for diff, mmsi in closest_five:
-        if mmsi in distance_mmsi_mapping:
+        if diff not in matched_angles and mmsi in distance_mmsi_mapping:
             curr_distance = distance_mmsi_mapping[mmsi]
-            if curr_distance < closest_distance:
+            if curr_distance < closest_distance and len(interpolated_distances[mmsi]) > 0:
                 closest_distance = curr_distance
+                oldest_distance = interpolated_distances[mmsi][0]
                 closest_mmsi = mmsi
+                sign=True
+    if len(interpolated_distances[mmsi]) > 1 and sign == True:
+        oldest_distance = interpolated_distances[mmsi][0]
+        interpolated_distances[mmsi] = np.delete(interpolated_distances[mmsi], 1)
+        sign = False
+
 
     # 更新已匹配角度集合和返回信息
     if closest_mmsi:
         matched_angles.add(angle)  # 将当前角度标记为已匹配
         mmsi_info = f"MMSI: {closest_mmsi}"
-        distance_info = f"Distance: {closest_distance:.2f} m"
+        distance_info = f"Distance: {oldest_distance:.2f} m"
 
     return mmsi_info, distance_info

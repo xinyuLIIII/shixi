@@ -4,84 +4,117 @@ import pandas as pd
 from ship_utils import calculate_relative_positions
 from API import ShipServiceAPI
 from yolo_utils import initialize_video_stream, process_frame, display_and_save_frame
+from collections import defaultdict
+import numpy as np
+from scipy.interpolate import interp1d
 
+accumulated_distances = defaultdict(list)
+last_recorded_distances = {}
+interpolated_distances = defaultdict(list)
+final_distances = {}
 
+def ais_data_con(api, camera_para, mmsi):
+    ships_data = api.get_nearby_ships(mmsi)
 
-def stream_video_to_rtmp(output_url, cap, yolov8, angle_mmsi_mapping, distance_mmsi_mapping, matched_angles):
-    # 定义ffmpeg命令，将输出推送到RTMP服务器
-    command = [
-        'ffmpeg',
-        '-y',  # 覆盖输出文件
-        '-f', 'rawvideo',  # 输入格式为原始视频
-        '-vcodec', 'rawvideo',
-        '-pix_fmt', 'bgr24',  # 输入像素格式
-        '-s', '{}x{}'.format(int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))),  # 输入视频大小
-        '-r', '0.1',  # 输入帧率
-        '-i', '-',  # 从stdin读取输入
-        '-c:v', 'libx264',  # 输出视频编码
-        '-pix_fmt', 'yuv420p',  # 输出像素格式
-        '-preset', 'ultrafast',  # 编码速度和质量的平衡
-        '-f', 'flv',  # 输出格式为FLV
-        output_url  # RTMP服务器的URL
-    ]
-    
-    process = subprocess.Popen(command, stdin=subprocess.PIPE)
-
-    while True:
-        ret, frame = cap.read()
-        if not ret:
-            break
-
-        annotations = process_frame(frame, int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)), yolov8, angle_mmsi_mapping, distance_mmsi_mapping, matched_angles)
-        display_and_save_frame(frame, annotations, None)
-
-        # 将处理后的帧写入ffmpeg进程的stdin
-        process.stdin.write(frame.tobytes())
-
-    cap.release()
-    process.stdin.close()
-    process.wait()
-
-
-
-def main():
-    camera_para = [113.2272883, 21.94803, 100]  # 相机参数 (经度, 纬度, 水平朝向)
-    api = ShipServiceAPI()
-    ships_data = api.get_nearby_ships("413867644")  # 假设这里返回的ships_data包含mmsi字段
-
-    if not isinstance(ships_data, list):  # 确保API调用成功
+    if not isinstance(ships_data, list):
         print("API call failed:", ships_data)
-        return
+        return None
 
-    # 将数据转换为DataFrame
     target_points = pd.DataFrame({
         'lon': [ship['longitude'] for ship in ships_data],
         'lat': [ship['latitude'] for ship in ships_data],
         'mmsi': [ship['maritimeMobileServiceIdentity'] for ship in ships_data]
     })
+
     results = calculate_relative_positions(target_points, camera_para)
     angle_mmsi_mapping = {float(row['angle_with_x_axis']): row['mmsi'] for index, row in results.iterrows()}
-    distance_mmsi_mapping = {row['mmsi']: row['distance'] for index, row in results.iterrows()}
 
-    YOLOV8_WEIGHTS = "autonomous_robot-fusion_ais_image-889d81fa25bfcc0c07246545114345e29e29b755/onnx/ship_yolov8.onnx"  # 替换为你的模型路径
-    DET_THRES = 0.35
-    device_no = "hw_mera0813_0"
+    for index, row in results.iterrows():
+        accumulated_distances[row['mmsi']].append(row['distance'])
+
+    # Update and interpolate distances
+    for mmsi, distances in accumulated_distances.items():
+        if len(distances) >= 4:
+            x = np.arange(len(distances))
+            f = interp1d(x, distances, kind='cubic', fill_value="extrapolate")
+            fine_x = np.linspace(0, len(distances) - 1, num=len(distances) * 10)
+            interpolated_result = f(fine_x)
+            interpolated_distances[mmsi] = interpolated_result
+            final_distances[mmsi] = interpolated_result[-1]
+        elif len(distances) > 1:
+            x = np.arange(len(distances))
+            f = interp1d(x, distances, kind='linear')
+            fine_x = np.linspace(0, len(distances) - 1, num=len(distances) * 10)
+            interpolated_result = f(fine_x)
+            interpolated_distances[mmsi] = interpolated_result
+            final_distances[mmsi] = interpolated_result[-1]
+        elif distances:
+            final_distances[mmsi] = distances[0]
+
+    return angle_mmsi_mapping
+
+def ffmpeg_init(output_url, cap):
+    command = [
+        'ffmpeg',
+        '-y',
+        '-f', 'rawvideo',
+        '-vcodec', 'rawvideo',
+        '-pix_fmt', 'bgr24',
+        '-s', '{}x{}'.format(int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))),
+        '-r', '0.1',
+        '-i', '-',
+        '-c:v', 'libx264',
+        '-pix_fmt', 'yuv420p',
+        '-preset', 'ultrafast',
+        '-f', 'flv',
+        output_url
+    ]
+    process = subprocess.Popen(command, stdin=subprocess.PIPE)
+    return process
+
+def process_data(output_url, cap, yolov8, matched_angles, api, camera_para, mmsi):
+    # process = ffmpeg_init(output_url, cap)
+    try:
+        while True:
+            ret, frame = cap.read()
+            if not ret:
+                break
+
+            angle_mmsi_mapping = ais_data_con(api, camera_para, mmsi)
+            if angle_mmsi_mapping is None:
+                print("Failed to get ship data.")
+                continue
+            print(interpolated_distances)
+            annotations = process_frame(frame, int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)), yolov8, angle_mmsi_mapping, final_distances,interpolated_distances,matched_angles)
+            display_and_save_frame(frame, annotations, None)
+            #process.stdin.write(frame.tobytes())
+    finally:
+        cap.release()
+        # process.stdin.close()
+        # process.wait()
+        print("Cleanup complete.")
+
+def main():
+    camera_para = [111.21248167, 23.41650333, 100]
+    api = ShipServiceAPI()
+    mmsi = "413867644"
+    yolov8_weights = "fusion_ais_image/onnx/ship_yolov8.onnx"
+    det_thres = 0.35
+    device_no = "hw_mera0862_1"
     url = api.get_camera_video_stream(device_no)
 
     if not url:
         print("Failed to get video stream URL.")
         return
 
-    cap, yolov8, out = initialize_video_stream(url, YOLOV8_WEIGHTS, DET_THRES, "path_to_output_video.avi")
+    cap, yolov8, out = initialize_video_stream(url, yolov8_weights, det_thres, "fusion_ais_image/video/path_to_output_video.avi")
     if cap is None:
         return
 
-    # 初始化matched_angles
     matched_angles = set()
 
-    stream_video_to_rtmp('rtmp://192.168.1.202:11935/myapp/test', cap, yolov8, angle_mmsi_mapping, distance_mmsi_mapping, matched_angles)
+    process_data('rtmp://192.168.1.202:11935/myapp/test', cap, yolov8, matched_angles, api, camera_para, mmsi)
 
-    cap.release()
     out.release()
     cv2.destroyAllWindows()
 

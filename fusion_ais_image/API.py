@@ -54,9 +54,9 @@ class ShipServiceAPI:
 
 if __name__ == '__main__':
     api = ShipServiceAPI()
-    mmsi = "413904523"  # 替换为具体的MMSI码
-    ship_name = "高栏833"  # 替换为具体的船名
-    device_no = "hw_mera0813_0"  # 替换为具体的设备编号
+    mmsi = "413845197"  # 替换为具体的MMSI码
+    ship_name = "粤海10"  # 替换为具体的船名
+    device_no = "hw_mera0862_0"  # 替换为具体的设备编号
     #print(api.get_nearby_ships(mmsi))
     #print(api.get_ship_cameras(ship_name))
     print(api.get_camera_video_stream(device_no))

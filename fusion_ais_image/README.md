@@ -16,31 +16,18 @@ sudo apt install libnginx-mod-rtmp
 ```
 
 ## 代码位置
-api接口文档在[文档](WebAPI.md)
+### 代码位置
 
-通过api接口接收数据的[代码](API.py)
+位置在[这里](fusion_ais_image)
 
-通过yolov8处理实时传输的视频流[代码](yolo_utils.py)
+api接口文档在[文档](fusion_ais_image\WebAPI.md)
 
-处理ais经纬度信息变换并计算角度[代码](ship_utils.py)
+通过api接口接收数据的[代码](fusion_ais_image\WebAPI.md)
 
-[主函数代码](total.py)
+通过yolov8处理实时传输的视频流[代码](fusion_ais_image\yolo_utils.py)
 
-## rtmp
-IN /etc/nginx/nginx.conf
+处理ais经纬度信息变换并计算角度[代码](fusion_ais_image\ship_utils.py)
 
-rtmp {
-    server {
-        listen 1935; # RTMP 监听端口
-        chunk_size 4096;
+[主函数代码](fusion_ais_image\total.py)
 
-        application live { # 'live' 是应用名，可以自定义
-            live on;
-            record off; # 关闭录制
-        }
-    }
-}
-
-REBOOT
-
-sudo systemctl restart nginx
+实现的[前端网页](fusion_ais_image\videoPlayer.html)，需注意要启动http服务，在运行前，终端运行'python -m http.server'，网址为http://<局域网IP地址>:8000/videoPlayer.html
