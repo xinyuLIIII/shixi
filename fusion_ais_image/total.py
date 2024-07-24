@@ -84,7 +84,7 @@ def process_data(output_url, cap, yolov8, matched_angles, api, camera_para, mmsi
             if angle_mmsi_mapping is None:
                 print("Failed to get ship data.")
                 continue
-            print(interpolated_distances)
+            #print(interpolated_distances)
             annotations = process_frame(frame, int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)), yolov8, angle_mmsi_mapping, final_distances,interpolated_distances,matched_angles)
             display_and_save_frame(frame, annotations, None)
             #process.stdin.write(frame.tobytes())
@@ -95,7 +95,7 @@ def process_data(output_url, cap, yolov8, matched_angles, api, camera_para, mmsi
         print("Cleanup complete.")
 
 def main():
-    camera_para = [111.21248167, 23.41650333, 100]
+    camera_para = [111.21248167,23.41650333, 263]
     api = ShipServiceAPI()
     mmsi = "413867644"
     yolov8_weights = "fusion_ais_image/onnx/ship_yolov8.onnx"

@@ -63,30 +63,32 @@ def match_mmsi_and_distance(box, bottom_center, angle_mmsi_mapping, distance_mms
     object_center = ((x1 + x2) // 2, (y1 + y2) // 2)
 
     # 计算对象中心与视频下边缘中心的角度
-    angle = calculate_angle(object_center, bottom_center)
-
+    unit_angle = calculate_angle(object_center, bottom_center)
+    angle = math.ceil(unit_angle)
     # 查找与当前角度最接近的MMSI
-    angle_diffs = [(abs(angle - k), mmsi) for k, mmsi in angle_mmsi_mapping.items() if k not in matched_angles]
+    angle_diffs = [(abs(angle - k), k, mmsi) for k, mmsi in angle_mmsi_mapping.items() if k not in matched_angles]
     closest_five = heapq.nsmallest(5, angle_diffs)  # 获取最接近的五个角度
 
-    for diff, mmsi in closest_five:
-        if diff not in matched_angles and mmsi in distance_mmsi_mapping:
+    sign = False
+    for diff, ais_angle, mmsi in closest_five:
+        if ais_angle not in matched_angles and mmsi in distance_mmsi_mapping:
             curr_distance = distance_mmsi_mapping[mmsi]
             if curr_distance < closest_distance and len(interpolated_distances[mmsi]) > 0:
                 closest_distance = curr_distance
                 oldest_distance = interpolated_distances[mmsi][0]
                 closest_mmsi = mmsi
-                sign=True
-    if len(interpolated_distances[mmsi]) > 1 and sign == True:
-        oldest_distance = interpolated_distances[mmsi][0]
-        interpolated_distances[mmsi] = np.delete(interpolated_distances[mmsi], 1)
-        sign = False
+                closest_ais_angle = ais_angle
+                sign = True
 
+    if len(interpolated_distances[closest_mmsi]) > 1 and sign:
+        interpolated_distances[closest_mmsi] = np.delete(interpolated_distances[closest_mmsi], 0)
 
     # 更新已匹配角度集合和返回信息
     if closest_mmsi:
-        matched_angles.add(angle)  # 将当前角度标记为已匹配
+        matched_angles.add(closest_ais_angle)  # 将AIS数据中匹配到的角度标记为已匹配
         mmsi_info = f"MMSI: {closest_mmsi}"
         distance_info = f"Distance: {oldest_distance:.2f} m"
 
     return mmsi_info, distance_info
+
+
