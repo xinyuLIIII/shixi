@@ -96,7 +96,11 @@ def process_data(output_url, out,cap, yolov8, matched_angles, api, camera_para, 
         print("Cleanup complete.")
 
 def main():
+<<<<<<< HEAD
     camera_para = [111.1406267,23.43458,327]
+=======
+    camera_para = [111.21248167,23.41650333, 263]
+>>>>>>> 9f91cb7cc5ac7f3fead04020d11670d4039384b9
     api = ShipServiceAPI()
     mmsi = "413848169"
     yolov8_weights = "fusion_ais_image/onnx/best.onnx"

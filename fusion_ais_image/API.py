@@ -54,7 +54,11 @@ class ShipServiceAPI:
 
 if __name__ == '__main__':
     api = ShipServiceAPI()
+<<<<<<< HEAD
     mmsi = "413873583"  # 替换为具体的MMSI码
+=======
+    mmsi = "413837924"  # 替换为具体的MMSI码
+>>>>>>> 9f91cb7cc5ac7f3fead04020d11670d4039384b9
     ship_name = "粤海10"  # 替换为具体的船名
     device_no = "hw_mera0862_0"  # 替换为具体的设备编号
     print(api.get_nearby_ships(mmsi))
