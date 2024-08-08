@@ -21,6 +21,8 @@
 
 3. 相机启动时可能打不开，这是因为在汽车启动时，会弹出一个报告启动状态的框占用了端口，给他杀死就好了
 
+4. 雷达的扫描范围一般可以通过config文件更改，但改项目是通过代码更改的，位置在[follow_line_4ROS_R2.py](ros2\src\yahboomcar_linefollow\yahboomcar_linefollow\follow_line_4ROS_R2.py)中的registerScan中，也可以参考
+
 ## 2.基于YOLOV5和ROS实现在小车传输图像在服务器上推理并推流到网页
 ### 位置
 汽车上的代码在[image_subscriber](ros\camera_subscriber)
@@ -148,3 +150,23 @@ api接口文档在[文档](fusion_ais_image\WebAPI.md)
 具体功能在[fusion_ais_image\total.py](fusion_ais_image\total.py)
 
 实现的[前端网页](fusion_ais_image\videoPlayer.html)
+
+#### 7.29
+好久没写了，今天补一下，最近没什么活干，一直都在做录数据帮忙弄给领导演示，另外他们觉得这个方案有点麻烦，所以换了一种方案，觉得试一下用双目摄像头测距，经过上周的讨论，发现segment anything这个东西貌似比直接用yolo识别更简单更快，决定最近研究一下
+
+补充：后来选择了基于segment anything的ov-seg看起来效果好一点，并且可以识别种类。但是结果不理想，因为摄像头中把自己也照了一小部分进去，由于数据集是官方通过coco训练的，所以也把自己识别了出来，同时对于远处的船效果也不好，但是自己了解了图像分割这一板块。另外，现在[Grounded-SAM](https://github.com/IDEA-Research/Grounded-Segment-Anything)貌似更好，下次用图像分割可以尝试用这个，同时也可以用来帮助标注数据集
+#### 7.31
+新任务，实现船舶的轨迹预测，给了一个excel文件，里面包含了每艘船ais历史信息，通过这些历史信息做二次线性回归从而预测轨迹。目前已经预测出来，同时设定两艘船接近一定范围内则预警碰撞。这些都已实现，目前在实验做卡尔曼滤波争取解决经纬度的漂移问题
+
+#### 8.7 
+滤波交给其他人做，目前训练了新的模型用于检测船只，添加的代码及功能如下：
+
+[yolo模型pt转onnx](fusion_ais_image\pt_to_onnx.py)
+
+[用于yolo的推理测试代码](fusion_ais_image\video_inference.py)
+
+[通过udp协议传输数据代码：服务端](fusion_ais_image\sever.py)用以接收数据
+
+[通过udp协议传输数据代码：客户端](fusion_ais_image\cilent.py)用以发送数据
+
+客户端调用可见'用于yolo的推理测试代码'中应用

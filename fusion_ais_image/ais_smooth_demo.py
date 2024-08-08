@@ -5,7 +5,7 @@ from scipy.interpolate import interp1d
 import time
 from ship_utils import calculate_relative_positions
 from API import ShipServiceAPI
-
+### 功能为做数据的平滑处理
 # 初始化字典存储每个 mmsi 的累计距离、插值结果和最后记录的距离
 accumulated_distances = defaultdict(list)
 last_recorded_distances = {}

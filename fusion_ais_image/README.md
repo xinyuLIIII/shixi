@@ -18,16 +18,22 @@ sudo apt install libnginx-mod-rtmp
 ## 代码位置
 ### 代码位置
 
-位置在[这里](fusion_ais_image)
+api接口文档在[文档](WebAPI.md)
 
-api接口文档在[文档](fusion_ais_image\WebAPI.md)
+通过api接口接收数据的[代码](WebAPI.md)
 
-通过api接口接收数据的[代码](fusion_ais_image\WebAPI.md)
+通过yolov8处理实时传输的视频流[代码](yolo_utils.py)
 
-通过yolov8处理实时传输的视频流[代码](fusion_ais_image\yolo_utils.py)
+处理ais经纬度信息变换并计算角度[代码](ship_utils.py)
 
-处理ais经纬度信息变换并计算角度[代码](fusion_ais_image\ship_utils.py)
+[主函数代码](total.py)
 
-[主函数代码](fusion_ais_image\total.py)
+实现的[前端网页](videoPlayer.html)，需注意要启动http服务，在运行前，终端运行'python -m http.server'，网址为http://<局域网IP地址>:8000/videoPlayer.html
 
-实现的[前端网页](fusion_ais_image\videoPlayer.html)，需注意要启动http服务，在运行前，终端运行'python -m http.server'，网址为http://<局域网IP地址>:8000/videoPlayer.html
+
+
+[通过udp协议传输数据代码：服务端](sever.py)
+
+[通过udp协议传输数据代码：客户端](cilent.py)
+
+[请用最新训练模型](onnx\best.onnx)
